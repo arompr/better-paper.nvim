@@ -496,6 +496,14 @@ local highlights = {
   ['@lsp.type.parameter'] = { fg = earthy_brown },
   ['@lsp.type.parameter.java'] = { fg = earthy_brown },
   ['@lsp.type.parameter.go'] = { fg = earthy_brown },
+
+  -- Local variables (same earthy tone)
+  ['@variable.local'] = { fg = earthy_brown },
+  ['@variable.java'] = { fg = earthy_brown },
+
+  -- LSP semantic tokens for local variables
+  ['@lsp.typemod.variable.local'] = { fg = earthy_brown },
+  ['@lsp.type.variable.java'] = { fg = earthy_brown },
 }
 
 for group, opts in pairs(highlights) do
