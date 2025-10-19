@@ -11,7 +11,7 @@ return require('telescope').register_extension({
 
     setup_called = true
 
-    strats.grey = function(self, max_columns, max_lines, layout_config)
+    strats.paper_purple = function(self, max_columns, max_lines, layout_config)
       local layout =
         strats.horizontal(self, max_columns, max_lines, layout_config)
 
@@ -34,7 +34,12 @@ return require('telescope').register_extension({
       return layout
     end
 
-    strats.grey_cursor = function(self, max_columns, max_lines, layout_config)
+    strats.paper_purple_cursor = function(
+      self,
+      max_columns,
+      max_lines,
+      layout_config
+    )
       local layout = strats.cursor(self, max_columns, max_lines, layout_config)
 
       layout.prompt.borderchars =

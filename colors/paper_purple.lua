@@ -1,9 +1,8 @@
--- Name:         Grey
--- Description:  A low-contrast light theme for NeoVim
--- Author:       Yorick Peterse <yorick@yorickpeterse.com>
--- Maintainer:   Yorick Peterse <yorick@yorickpeterse.com>
--- Website:      https://github.com/yorickpeterse/nvim-grey
--- License:      MPL 2.0
+-- Name:              PaperPurple
+-- Description:       A low-contrast light theme for NeoVim
+-- Author:            Anthony Rompré
+-- Original Author:   Yorick Peterse <yorick@yorickpeterse.com>
+-- License:           MPL 2.0
 
 local o = vim.o
 local g = vim.g
@@ -16,7 +15,7 @@ if g.syntax_on == 1 then
 end
 
 o.background = 'light'
-g.colors_name = 'grey'
+g.colors_name = 'paper_purple'
 
 local background = '#f2f2f2'
 local grey_bg_light = '#ececec'
@@ -37,6 +36,8 @@ local orange = '#a55000'
 local purple = '#5c21a5'
 local white = '#ffffff'
 local cyan = '#007872'
+local eclipse_purple = '#7F0000'
+local earthy_brown = '#5C2F2F'
 
 g.terminal_color_0 = black
 g.terminal_color_1 = red
@@ -92,7 +93,7 @@ local highlights = {
   CurSearch = { link = 'Search' },
   Include = { fg = black, bold = true },
   InstanceVariable = { fg = purple },
-  Keyword = { fg = black, bold = true },
+  Keyword = { fg = eclipse_purple, bold = true },
   Label = { link = 'Keyword' },
   LineNr = { fg = grey },
   Macro = { fg = orange },
@@ -462,7 +463,7 @@ local highlights = {
   ['@text.reference'] = { fg = purple },
   ['@text.strong'] = { bold = true },
   ['@text.uri'] = { fg = blue },
-  ['@variable.builtin'] = { bold = true },
+  ['@variable.builtin'] = { link = 'Keyword', bold = true },
   ['@string.regexp'] = { link = 'Regexp' },
   -- Custom Tree-sitter captures added by this theme.
   ['@variable.parameter.reference'] = { fg = orange },
@@ -481,6 +482,20 @@ local highlights = {
   yardComment = { link = 'Comment' },
   yardType = { link = 'Todo' },
   yardTypeList = { link = 'Todo' },
+
+  -- This keyword
+  -- ['@variable.builtin.java'] = { fg = eclipse_purple },
+  ['@lsp.type.modifier.java'] = { link = 'Keyword' },
+
+  -- Parameters
+  ['@parameter'] = { fg = earthy_brown },
+  ['@parameter.java'] = { fg = earthy_brown },
+  ['@parameter.go'] = { fg = earthy_brown },
+
+  -- LSP semantic tokens for parameters
+  ['@lsp.type.parameter'] = { fg = earthy_brown },
+  ['@lsp.type.parameter.java'] = { fg = earthy_brown },
+  ['@lsp.type.parameter.go'] = { fg = earthy_brown },
 }
 
 for group, opts in pairs(highlights) do
