@@ -38,6 +38,8 @@ local white = '#ffffff'
 local cyan = '#007872'
 local eclipse_purple = '#7F0000'
 local earthy_brown = '#5C2F2F'
+-- local member_variable_accent = '#8B3E2F'
+local member_variable_accent = '#7F0000'
 
 g.terminal_color_0 = black
 g.terminal_color_1 = red
@@ -92,8 +94,8 @@ local highlights = {
   IncSearch = { link = 'Search' },
   CurSearch = { link = 'Search' },
   Include = { fg = black, bold = true },
-  InstanceVariable = { fg = purple },
-  Keyword = { fg = eclipse_purple, bold = true },
+  -- InstanceVariable = { fg = purple },
+  Keyword = { fg = black, bold = true },
   Label = { link = 'Keyword' },
   LineNr = { fg = grey },
   Macro = { fg = orange },
@@ -464,6 +466,7 @@ local highlights = {
   ['@text.strong'] = { bold = true },
   ['@text.uri'] = { fg = blue },
   ['@variable.builtin'] = { link = 'Keyword', bold = true },
+  ['@type.builtin'] = { link = 'Keyword', bold = true },
   ['@string.regexp'] = { link = 'Regexp' },
   -- Custom Tree-sitter captures added by this theme.
   ['@variable.parameter.reference'] = { fg = orange },
@@ -483,27 +486,31 @@ local highlights = {
   yardType = { link = 'Todo' },
   yardTypeList = { link = 'Todo' },
 
-  -- This keyword
-  -- ['@variable.builtin.java'] = { fg = eclipse_purple },
   ['@lsp.type.modifier.java'] = { link = 'Keyword' },
 
-  -- Parameters
+  -- -- Parameters
   ['@parameter'] = { fg = earthy_brown },
-  ['@parameter.java'] = { fg = earthy_brown },
-  ['@parameter.go'] = { fg = earthy_brown },
+  ['@variable.parameter'] = { fg = earthy_brown },
 
-  -- LSP semantic tokens for parameters
+  -- -- LSP semantic tokens for parameters
   ['@lsp.type.parameter'] = { fg = earthy_brown },
-  ['@lsp.type.parameter.java'] = { fg = earthy_brown },
-  ['@lsp.type.parameter.go'] = { fg = earthy_brown },
 
   -- Local variables (same earthy tone)
   ['@variable.local'] = { fg = earthy_brown },
-  ['@variable.java'] = { fg = earthy_brown },
+  ['@variable.lua'] = { fg = earthy_brown },
+  ['@variable.go'] = { fg = earthy_brown },
 
   -- LSP semantic tokens for local variables
   ['@lsp.typemod.variable.local'] = { fg = earthy_brown },
+  ['@lsp.type.variable'] = { fg = earthy_brown },
   ['@lsp.type.variable.java'] = { fg = earthy_brown },
+
+  ['@variable.member'] = { fg = member_variable_accent },
+
+  -- Java LSP semantic tokens
+  ['@lsp.type.property.java'] = { fg = member_variable_accent },
+
+  ['@lsp.mod.readonly.go'] = { link = 'Keyword' },
 }
 
 for group, opts in pairs(highlights) do
