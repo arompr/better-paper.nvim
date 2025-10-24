@@ -1,11 +1,10 @@
-# Paper Purple
+# Better Paper
 
 A low-contrast theme for NeoVim, based on
 [nvim-grey](https://github.com/yorickpeterse/nvim-grey) and written in Lua
 
-PaperPurple is a continuation of the goal of making a light theme that's easy on the
-eyes, and not distracting by introducing many colors. The most notable
-difference compared to Grey or Paper is that Keywords are a dark purple. Hence the (incredibly creative) name.
+BetterPaper is a continuation of the goal of making a light theme that's easy on the
+eyes, and not distracting by introducing many colors. This is only a slight fork from Grey. The most notable difference is the solarized inspired background color.
 
 Like Paper, this theme is best used on a low brightness display, with a color
 temperature of <5500K. During the day I use a color temperature of 5200K, while
@@ -13,7 +12,6 @@ at night the temperature is set to 3800K. This theme probably won't look so good
 when using the common display temperature of 6500K.
 
 # Screenshots
-<img width="1888" height="1072" alt="image" src="https://github.com/user-attachments/assets/30276c1c-d32e-4dc6-bbd3-cb237403b5f6" />
 
 # Requirements
 
@@ -27,16 +25,16 @@ is designed with this setting in mind.
 
 ## Vim Plug
 
-    Plug 'arompr/paper-purple.nvim'
+    Plug 'arompr/better-paper.nvim'
 
 ## Lazy
 
-    return { "arompr/paper-purple.nvim" }
+    return { "arompr/better-paper.nvim" }
 
 # Telescope extension
 
 An extension for Telescope is included, providing a layout strategy called
-"paper_purple". It's recommended that Telescope users use this layout, as the theme
+"better_paper". It's recommended that Telescope users use this layout, as the theme
 applies highlights with this layout in mind. To enable, configure Telescope like
 so:
 
@@ -50,7 +48,7 @@ require('telescope').setup({
 
     -- This is the important part: without this, Telescope windows will look a
     -- bit odd due to how borders are highlighted.
-    layout_strategy = 'paper_purple',
+    layout_strategy = 'better_paper',
     layout_config = {
      -- The extension supports both "top" and "bottom" for the prompt.
       prompt_position = 'top',
@@ -63,7 +61,7 @@ require('telescope').setup({
   }
 })
 
-telescope.load_extension('paper_purple')
+telescope.load_extension('better_paper')
 ```
 
 # License

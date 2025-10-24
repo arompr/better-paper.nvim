@@ -1,4 +1,4 @@
--- Name:              PaperPurple
+-- Name:              BetterPaper
 -- Description:       A low-contrast light theme for NeoVim
 -- Author:            Anthony Rompré
 -- Original Author:   Yorick Peterse <yorick@yorickpeterse.com>
@@ -17,7 +17,7 @@ end
 o.background = 'light'
 g.colors_name = 'paper_purple'
 
-local background = '#f2f2f2'
+local background = '#fdf6e3'
 local grey_bg_light = '#ececec'
 local black = '#000000'
 local blue = '#1561b8'
@@ -36,10 +36,6 @@ local orange = '#a55000'
 local purple = '#5c21a5'
 local white = '#ffffff'
 local cyan = '#007872'
-local eclipse_purple = '#7F0000'
-local earthy_brown = '#5C2F2F'
--- local member_variable_accent = '#8B3E2F'
-local member_variable_accent = '#7F0000'
 
 g.terminal_color_0 = black
 g.terminal_color_1 = red
@@ -120,7 +116,7 @@ local highlights = {
   Question = { fg = black },
   QuickFixLine = { bg = highlight, bold = true },
   Regexp = { fg = orange },
-  Search = { bg = light_yellow },
+  Search = { bg = dark_yellow },
   SignColumn = { link = 'FoldColumn' },
   Special = { fg = black },
   SpecialKey = { link = 'Number' },
@@ -485,32 +481,6 @@ local highlights = {
   yardComment = { link = 'Comment' },
   yardType = { link = 'Todo' },
   yardTypeList = { link = 'Todo' },
-
-  ['@lsp.type.modifier.java'] = { link = 'Keyword' },
-
-  -- -- Parameters
-  ['@parameter'] = { fg = earthy_brown },
-  ['@variable.parameter'] = { fg = earthy_brown },
-
-  -- -- LSP semantic tokens for parameters
-  ['@lsp.type.parameter'] = { fg = earthy_brown },
-
-  -- Local variables (same earthy tone)
-  ['@variable.local'] = { fg = earthy_brown },
-  ['@variable.lua'] = { fg = earthy_brown },
-  ['@variable.go'] = { fg = earthy_brown },
-
-  -- LSP semantic tokens for local variables
-  ['@lsp.typemod.variable.local'] = { fg = earthy_brown },
-  ['@lsp.type.variable'] = { fg = earthy_brown },
-  ['@lsp.type.variable.java'] = { fg = earthy_brown },
-
-  ['@variable.member'] = { fg = member_variable_accent },
-
-  -- Java LSP semantic tokens
-  ['@lsp.type.property.java'] = { fg = member_variable_accent },
-
-  ['@lsp.mod.readonly.go'] = { link = 'Keyword' },
 }
 
 for group, opts in pairs(highlights) do
