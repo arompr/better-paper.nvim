@@ -12,6 +12,7 @@ at night the temperature is set to 3800K. This theme probably won't look so good
 when using the common display temperature of 6500K.
 
 # Screenshots
+<img width="1882" height="1092" alt="image" src="https://github.com/user-attachments/assets/b2f13e9d-8042-4b82-b204-ae879637b8f0" />
 
 # Requirements
 
