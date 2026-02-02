@@ -15,7 +15,7 @@ if g.syntax_on == 1 then
 end
 
 o.background = 'light'
-g.colors_name = 'paper_purple'
+g.colors_name = 'better-paper'
 
 local background = '#fdf6e3'
 local grey_bg_light = '#ececec'
